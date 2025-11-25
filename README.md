@@ -18,7 +18,7 @@
     * **Unit Conversion:** Automatically converts metric tons (MTS) to Kilograms (KG).
     * **Currency Normalization:** Calculates USD values and INR totals using historical exchange rates (via `ExchangeRate.xlsx`).
 * **Schema Mapping:** Automatically renames and maps columns based on the data context (Import vs. Export).
-* **SQL Integration:**Directly uploads validated, transformed data to MS SQL Server.
+* **SQL Integration:** Directly uploads validated, transformed data to MS SQL Server.
 
 ## 🛠️ Tech Stack
 
