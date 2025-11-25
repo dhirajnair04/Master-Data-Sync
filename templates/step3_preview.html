@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-col h-full">
+    <div class="mb-6 flex justify-between items-end">
+        <div>
+            <div class="flex items-center gap-3 mb-2">
+                <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 font-bold">3</div>
+                <h2 class="text-2xl font-bold text-emerald-700">Final Data Preview</h2>
+            </div>
+            <p class="text-pastel-sub">This is the final calculated data. Please verify columns before uploading.</p>
+        </div>
+        <div class="text-sm text-slate-400">Ready for Database</div>
+    </div>
+
+    <div class="bg-pastel-card shadow-lg rounded-xl border border-emerald-100 overflow-hidden flex-grow mb-6 relative">
+        <div class="overflow-auto h-[60vh] w-full">
+            {{ table_html|safe }}
+        </div>
+    </div>
+
+    <div class="flex justify-between items-center">
+        <a href="/step2" class="px-6 py-3 rounded-xl border border-slate-300 text-slate-600 hover:bg-slate-50 font-medium transition">
+            ← Back to Sync Preview
+        </a>
+        
+        <form action="/upload_db" method="POST" onsubmit="showLoading('Uploading to Database...')">
+            <button type="submit" class="px-8 py-3 bg-pastel-accent hover:bg-emerald-500 text-white font-bold rounded-xl shadow-md transform transition hover:-translate-y-0.5 flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                Upload Final Data to DB
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

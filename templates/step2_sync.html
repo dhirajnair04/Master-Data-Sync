@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-col h-full">
+    <div class="mb-6 flex justify-between items-end">
+        <div>
+            <div class="flex items-center gap-3 mb-2">
+                <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-pastel-primary font-bold">2</div>
+                <h2 class="text-2xl font-bold text-slate-800">Master Sync Preview</h2>
+            </div>
+            <p class="text-pastel-sub">This data has been synced with EntityMaster. Names have been standardized.</p>
+        </div>
+        <div class="text-sm text-slate-400">Showing first 50 rows</div>
+    </div>
+
+    <div class="bg-pastel-card shadow-lg rounded-xl border border-slate-200 overflow-hidden flex-grow mb-6 relative">
+        <div class="overflow-auto h-[60vh] w-full">
+            {{ table_html|safe }}
+        </div>
+    </div>
+
+    <div class="flex justify-between items-center">
+        <a href="/" class="px-6 py-3 rounded-xl border border-slate-300 text-slate-600 hover:bg-slate-50 font-medium transition">
+            ← Start Over
+        </a>
+        
+        <a href="/step3" onclick="showLoading('Applying Final Calculations...')" class="px-8 py-3 bg-pastel-primary hover:bg-pastel-primary-hover text-white font-bold rounded-xl shadow-md transform transition hover:-translate-y-0.5 flex items-center gap-2">
+            Proceed to Final Calculations →
+        </a>
+    </div>
+</div>
+{% endblock %}
