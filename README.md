@@ -11,7 +11,7 @@
 ## 🚀 Key Features
 
 * **3-Step Wizard Interface:** A user-friendly, step-by-step process (Upload -> Sync -> Preview -> Commit).
-* **Master Data Management (MDM):** * Automatically validates `IEC Codes` against an `EntityMaster` database table.
+* **Master Data Management (MDM):** Automatically validates `IEC Codes` against an `EntityMaster` database table.
     * **Auto-Learning:** Detects new entities in upload files and automatically adds them to the Master Database with standardized formatting.
     * **Name Standardization:** Expands business terms (e.g., "PVT" -> "PRIVATE") and removes special characters for consistency.
 * **Automated Calculations:**
